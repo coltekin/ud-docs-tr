@@ -17,7 +17,7 @@ subject:
 ~~~~ sdparse
 Evde bira var -0 . \n There is beer at home.
 cop(var, -0)
-nsubj(var, beer)
+nsubj(var, bira)
 nmod(var, evde)
 ~~~~
 
