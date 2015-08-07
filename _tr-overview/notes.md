@@ -15,7 +15,7 @@ documented in proper sections later.
   it is not clear whether it is a conjunction or simply
   'commutative/instrumental' case marking.
   
-  ```
+```
   (1) Annem-le     babam     eve       gitmiş
       My_mother-lA my_father house.DAT go.PAST.EVID
       `My mother and my father went home.'
@@ -23,7 +23,7 @@ documented in proper sections later.
   (2) Annem     babam-la     eve       gitmiş.
       My_mother my_father-lA house.DAT go.PAST.EVID
       `My mother went home with my mother.'
-  ```
+```
 
   Coordination is only possible and more likely when the -lA suffix is
   between the coordinated noun. Case-marking is possible in both
@@ -40,29 +40,29 @@ documented in proper sections later.
   
   Note that as in English PP attachment ambiguity, the `nmod` case can be ambiguous:
 
-  ```
+```
   Ali Ahmet'i    teleskopla  gördü.
   Ali Ahmet.ACC  telecope-lA see.
   `Ali saw Ahmet with a telescope'.
-  ```
+```
   With the right context, it is possible that the noun modified with 
   the phrase with *-lA* is omitted in the sentence.
 
-  ```
+```
   Dün       bir arkadaşı-yla   gördüm.
   Yesterday a   friend.P3S-lA  see.PAST.1SG
   `I saw (him/her) with a friend (of him/her)'.
-  ```
+```
   In this case, we connect the phrase with *-lA* to the predicate with `remnant` relation.
 
   In case of coordination, if the second conjunct is a pronoun, it can
   be omitted. 
 
-  ```
+```
   Annem-le      eve         gittik.
   My mother-lA  house.DAT   go.PAST.1PL
   'My mother and I went home'/'I went home with my mother'
-  ```
+```
   *-lA* in these cases is almost always ambiguous between a case
   marker and conjunction. If the second component is missing, and the context
   does not clearly indicate a conjunction, we use `nmod`. Otherwise, we
@@ -92,27 +92,27 @@ documented in proper sections later.
   or some sort of abstract relation) are combined with possessive
   and case (also with *-lA* and *-CA*) suffixes to form postpositions. For
   example:
-  ```
+```
   (1) Kitapların ara-sı-nda           bulabilirsin.
       Book.GEN   between.POS3SG.LOC   find.ABIL.AOR.P2SG
       `You can find (it/him/her) *between* the books.'
   (2) Dolabın       arka-sı-na      düştü
       Cupboard.GEN  back-POS3SG.LOC fall.PAST
       `It fell *behind* the cupboard.'
-  ```
+```
 
   Analyzing these as `ADP` seems reasonable, and would be parallel to
   the analyses in English, and possibly in other languages. However,
   things get a bit tricky, as the noun that is modified by the
   postposition may disappear. As in,
-  ```
+```
   (3) (Bizim) ön-ümüz-den       gidiyor.
       We.GEN  front.POS1PL.ABL  go.PAST.PROG
       `he/she/it is going *in front of* us'
   (4) (Senin) yer-in-e          onu     atamışlar.
       You.GEN place-POS2SG.DAT  he.DAT  appoint.EVID.P3PL
       `they appointed him *instead of* you.
-  ```
+```
   Note that the information about the (pro)noun being modified is
   recoverable from the postposition (using the possessive agreement 
   marker) but the noun phrase is missing.
