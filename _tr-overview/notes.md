@@ -15,7 +15,7 @@ documented in proper sections later.
   it is not clear whether it is a conjunction or simply
   'commutative/instrumental' case marking.
   
-```
+~~~~
   (1) Annem-le     babam     eve       gitmiş
       My_mother-lA my_father house.DAT go.PAST.EVID
       `My mother and my father went home.'
@@ -23,7 +23,7 @@ documented in proper sections later.
   (2) Annem     babam-la     eve       gitmiş.
       My_mother my_father-lA house.DAT go.PAST.EVID
       `My mother went home with my mother.'
-```
+~~~~
 
   Coordination is only possible and more likely when the -lA suffix is
   between the coordinated noun. Case-marking is possible in both
