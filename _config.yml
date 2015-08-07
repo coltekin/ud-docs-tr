@@ -1,0 +1,39 @@
+source:       .
+destination:  ./_site
+markdown:     kramdown
+# don't change the following; coderay will break the embedded
+# annotations.
+kramdown:
+  enable_coderay: false
+#   parse_block_html: true # allow markdown in <div> etc.
+permalink:    date
+# safe:         true
+markdown_ext: md
+
+# testing for redirect-from
+baseurl: "/ud-docs-tr"
+
+gems:
+  - jekyll-redirect-from
+
+collections:
+  tr-pos:
+    output: true
+    permalink: /template/pos/:path.html
+  tr-feat:
+    output: true
+    permalink: /template/feat/:path.html
+  tr-dep:
+    output: true
+    permalink: /template/dep/:path.html
+  tr-overview:
+    output: true
+
+excerpt_separator: "\n\n"
+
+# URL configuration
+
+home: "http://coltekin.github.io/ud-docs-tr/test.md"
+tracker: "https://github.com/universaldependencies/docs/issues"
+git_raw: "https://raw.githubusercontent.com/universaldependencies/docs/pages-source"
+git_edit: "https://github.com/universaldependencies/docs/edit/pages-source"
