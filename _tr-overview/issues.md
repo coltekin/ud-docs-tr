@@ -1,13 +1,17 @@
 ---
 layout: base
-title:  'Issues with UD annotation of Turkish'
+title:  'Some issues with UD annotation of Turkish'
 permalink: tr/overview/issues.html
 ---
 
-# Issues in UD annotation of Turkish
+# Some issues in UD annotation of Turkish
 
 This document is a summary of issues that arose during "pilot" UD annotation effort of Turkish.
 Here is an overall summary:
+
+{:toc}
+
+
 
 * Changes/additions to the feature values.
 * Multiple feature values for the same label.  
@@ -15,6 +19,7 @@ Here is an overall summary:
     - copula / subordinating suffixes
     - other productive derivation
     - zero derivation from adjectives to nouns
+    - Possessive suffixes deriving (pro)nouns from adjectivals
 * Compound verbs - light verb constructions
 * Arguments/adjuncts, indirect objects
 
@@ -24,15 +29,15 @@ Here is an overall summary:
   Turkish verb forms allow combination of past and future tenses to
   refer to events that happened after a reference in the past.
   *oku-yacak-tı-m* "I was going to read". This, currently, is not
-  covered with possible values of `Tense` feature. I currently mark
+  covered with possible values of the `Tense` feature. I currently mark
   these with `Pfut`, but open to suggestions for a better label.
   The double past (referring to an event before a past reference)
   is also possible *oku-muş-tu-m* 'I had read', but this matches the 
-  description of `Tense=Pqp`.
-* **`Narr`, currently listed as a possible `Tense` value, does not mark for tense.**  
+  description of `Tense=Pqp` defined already.
+* **`Narr` is currently listed as a possible `Tense` value, but it does not mark for tense.**  
   Current UD description lists `Narr` as a Tense value, explicitly
   referring to Turkish suffix *-mIş*.
-  However, the main function of this indicating _evidentiality_ which
+  However, the main function of this is indicating _evidentiality_ which
   matches `Mood` more than `Tense`. In its simplest use it also
   indicates `Tense=Past`. My suggestion is to drop the `Tense` value
   `Narr` (unless there is such a tense in another language), and add
@@ -73,14 +78,14 @@ The issue definitely affects the`Voice` feature, and it was raised
 In summary: Turkish verbs may get four different voice values,
 *passive*, *causative*, *reflexive* and *reciprocal*.
 First two are very productive.
-A large number of comibinations the voice features/suffixes may be observed on a single verb.
+A large number of combinations the voice features/suffixes may be observed on a single verb.
 Here are a few examples:
 
 * `Pass`+`Cau` *bu kitap oku-<b>t</b>-<b>ul</b>-du* "by someone's mandate this book was read".
-  Somewhat direct tranlation attempt does not feel right in English,
+  Somewhat direct translation attempt does not feel right in English,
   but this is a quite common construction, e.g., that one can see in a
   newspaper report meaning roughly 
-  "(by the ministery of education mandate) the book to be read in the classess (by the students)".
+  "(by the mandate of the ministry of education) the book to be read in the classes (by the students)".
 * `Cau`+`Rcp` *öp-<b>üş</b>-<b>tür</b>-dü* "she/he caused them to kissed each other"
 * `Cau`+`Pass`+`Rcp` *döv-<b>üş</b>-<b>tür</b>-<b>ül</b>-dü* "they are caused to fight each other"
 
@@ -99,7 +104,7 @@ Here are some examples:
   something)" (aspect: completed action, took a while)
 * `Gen` + `Nec` *yap-ıl-ma-<b>malı</b>-<b>dır</b>* "it must/should 
   not be done" (mood: it is a necessity according to the speaker, 
-  but also a general rule or hypthesis. Contrasts with, e.g.,
+  but also a general rule or hypothesis. Contrasts with, e.g.,
   *yapılmamalıydı* "it should not have been done")
 * `Abil` + `Nec` *yap-ıl-<b>a</b>-ma-<b>malı</b>* "it should not be possible"
 * `Evid` + `Nec` *yap-ıl-<b>malı</b>-<b>ymış</b>* "Apparently it has
@@ -191,7 +196,7 @@ Here, if we do not split the subordinating suffix, we end up with a `Case` featu
 or `Tense` feature on a noun
 (which may be fine if the noun was a predicate, but that is not necessarily the case).
 Also note that predicate *oku* 'read' needs `Number=Sing` (singular subject), 
-while the resulting noun phrase is plural (there are multiple items read). 
+while the resulting noun phrase is plural (there are multiple items that were read). 
 
 In general, a clause with a subordinating suffix functions as a `NOUN`, `ADJ` or `ADV`.
 We treat `NOUN` case slightly differently (reasons are discussed below).
@@ -247,7 +252,7 @@ Since (in these cases) the subordinating marker itself does not follow any other
 and since we attach the modifiers of the resulting adverbial or
 adjectival to the head (predicate,
 it may not be absolutely necessary to split the marker
-(we could use `VerbForm` or a similar mechanism to flag the use of the clause).
+(we could use `VerbForm` or a similar mechanism to flag that the clasues functions as an adjective or adverb).
 However, the present proposal is to split it for a (more) parallel
 treatment of them with the languages with a free subordinating
 morpheme,
@@ -255,15 +260,15 @@ and a more uniform treatment of subordinating suffixes with the verbal nouns dis
 
 #### Verbal nouns
 
+We use the term *verbal noun* for clauses that function as nouns in the higher-level clause.
 Verbal nouns are similar verbal adjective and adverbs discussed above. 
 However, they are treated differently, 
 since the resulting nominal can be modified by modifiers/suffixes.
-In general, verbal nouns in Turkish act more like common nouns than
-clauses.
+Within the main/higher-level clause, verbal nouns in Turkish act more like common nouns than clauses.
 The following suffixes attached to predicates form verbal nouns.
 
-* *–DIK/–AcAK/–An* These are parallel to the verbal
-  adjectives discussed above. 
+* *–DIK/–AcAK/–An*   
+  These are parallel to the verbal adjectives discussed above. 
   In general, any adjective in Turkish can be interpreted as a noun
   referring to an object having the property defined by the adjective.
   The verbal nouns formed by these suffixes has the same property.
@@ -305,7 +310,7 @@ Here are some examples:
 In all examples above *Ali'nin okuduğu* can be replaces with any ordinary (definite) noun.
 Besides the definite object that is defined by the corresponding
 adjectival clause, 
-the same verbal noun may represent the fact/concept, which is also
+the same verbal noun may represent a fact/concept, which is also
 shared by the other verbal noun suffixes that does not form
 adjectivals (*-mA* and *-mAK*).
 
@@ -319,8 +324,7 @@ adjectivals (*-mA* and *-mAK*).
 
 In most cases, the subordinate clause formed by one of these suffixes can be translated as "the object/concept/fact that ...".
 Because of that, my current proposal is to mark the IG with the subordinating suffix as the head of the construction.
-We mark the relation between the clause and the head with `acl` (as it
-would be in the parallel construction in English).
+We mark the relation between the clause and the head with `acl` (as it would be marked in the parallel constructions in English).
 This also allows treating these clauses like ordinary nouns,
 keeping the analysis parallel to the cases where an ordinary noun occupies the same syntactic slot.
 It also resolves the problem of two subjects if a copular suffix attached to the verbal noun.
@@ -370,17 +374,13 @@ nsubj(oku, Ali'nin)
 
 ##### The suffix -mAK
 
-The verbal noun suffix -mAK is somewhat different than the other
-verbal noun suffixes.
-Most of the times (but not always) its subject resolves to one of
-the arguments of the higher-level clause.
+The verbal noun suffix -mAK is somewhat different than the other verbal noun suffixes.
+Most of the times (but not always) its subject resolves to one of the arguments of the higher-level clause.
 It also cannot precede some of the nominal suffixes,
 such as plural suffix and possessive suffixes.
-Although, it receive any of the case suffixes,
-and a verbal noun formed by -mAK can be in any position a noun
-can appear in a clause.
-A potential analysis to mark -mAK differently than other verbal
-noun suffixes.
+Although, it receives any of the case suffixes,
+and a verbal noun formed by -mAK can be in any position a noun can appear in a clause.
+An option is to mark -mAK differently than other verbal noun suffixes.
 
 ~~~ sdparse
 Ali oku –mak istiyor \n Ali wants to read
@@ -397,7 +397,42 @@ However, it also breaks the parallel with the other forms,
 requires that the copula is marked as head if the verbal noun formed by *-mAK* is followed by one (in this case it is also unclear what relation to use between the copula and the subject-complement clause that *–mAK* is attached to).
 
 Current proposal suggests, marking -mAK clauses like other verbal nouns (–mAK as the head),
-but using a subtype of `acl` to signal that subject is missing (suggestions for the sub-type name are welcome).
+but possibly using a subtype of `acl` to signal that subject is missing.
+
+#### Possessive suffixes deriving (pro)nouns from adjectivals
+
+A rather productive construction derives nouns from adjectives,
+numerals and determiners by attaching possessive suffixes. 
+The ones derived from determiners are mostly lexicalized, 
+and determiner part cannot be modified. 
+However, in other cases, the adjectives or numbers can be modified by other words in the sentence.
+The verbal adjectives discussed above can also undergo the same derivation.
+
+This is most commonly used in "partitive" constructions.
+Here are a few examples:
+
+* *küçüğ<b>ü</b> daha akıllı* "the little <b>one</b> is smarter"
+* *bunun mavi<b>si</b>nden istiyorum* "I want the blue <b>one</b> of this"
+* *o en büyüğ<b>müz</b>* "he is the biggest/oldest <b>of us</b>"
+* *sadece üç<b>ünüz</b> buraya sığabilir* "only three <b>of you</b> can fit here"
+* *en iyi gören<b>iniz</b> arkada oturmalı* "the <b>one (of you)</b> who sees best should sit at the back"
+
+In this case, we split the word, and mark the last part of the IG
+(derviation) as the head of the construction (reason for this is
+similar to the reason for verbal nouns above).
+
+~~~ sdparse
+en büyüğ –ümüz
+advmod(büyüğ, en)
+amod(–ümüz, büyüğ)
+~~~
+
+Note that there is a fine difference between possessive drived
+pronouns discussed here and zero-derived nouns followed by a
+possessive suffix.
+
+- possessive derivation: *benimki bunun mavisi* "mine is the blue (version) of this"
+- possessive inflection: *mavisi bozulmuş* "his blue one is broken"
 
 #### Other derivational suffixes that introduce new IGs
 
@@ -470,6 +505,9 @@ The ones of ours came out from below
 ~~~
 
 ##### _–lI_
+
+-lI is very productive, but there are also many lexicalized forms.
+
 ~~~ sdparse
 iki havuz –lu ev \n house with two swimming pools
 nummod(havuz, iki)
@@ -478,6 +516,7 @@ nmod(ev, havuz)
 ~~~
 
 ##### _–lIk_
+
 ~~~ sdparse
 çantamda iki kitap –lık yer var \n I have space enough/suitable for two books
 nummod(kitap, iki)
@@ -493,7 +532,13 @@ case(lider, –siz)
 nmod(ülkeler, lider)
 ~~~
 
-##### _–cA_
+~~~ sdparse
+Araba–m –sız yapamam . \ I cannot do without my car
+case(Araba–m, –sız)
+nmod(yapamam, Araba–m)
+~~~
+
+##### _–CA_
 
 ~~~ sdparse
 bizim bakanlığımız –ca duyruldu \n announced by our ministry
@@ -502,18 +547,17 @@ case(bakanlığımız, –ca)
 nmod(duyruldu, bakanlığımız)
 ~~~
 
-##### _–cI_
+##### _–CI_
 
 This derives nouns, that are actually the head of the resulting phrase.
 
 ~~~ sdparse
-kırmızı şarap –çı \n the [red wine] seller  or the person who prefers
-red wine
+kırmızı şarap –çı \n "[red wine] seller" or "person who prefers red wine"
 amod(şarap, kırmızı)
 nmod(–çı, şarap)
 ~~~
 
-##### _–lArI_ _DIr_
+##### _–lArI_ and _DIr_
 
 These two attach to time expressions.
 
@@ -527,9 +571,101 @@ nmod:tmod(içer, Sabah)
 Beş yıl –dır çalışmıyor \n He hasn't been working for five years
 case(yıl, –dır)
 nummod(yıl, Beş)
-nmod:tmod(çalışmıyor, Beş)
+nmod:tmod(çalışmıyor, yıl)
 ~~~
 
 #### "zero" derivation from adjective to noun
 
+Adjectives in Turkish can be used as nouns referring to an object
+having the property described by the adjective, e.g.,  *Maviyi ver* "give me
+the blue one". We currently **do not** split an IG with a zero-morpheme
+in these cases. However, we may want to consider this since there are
+cases where the modifier modifies the adjective. Here is an example:
 
+~~~ sdparse
+En küçük –0 yarışı kazandı . \n The smallest one won the race
+advmod(küçük, En)
+amod(–0, küçük)
+nsubj(kazandı, –0)
+~~~
+
+## Compound verbs - light verb constructions
+
+Deciding which usage of a verb is "light" and which one is "heavy" is in general difficult.
+In Turkish only verb that (almost) exclusively functions as a light verb seems to be *et-*.
+Other verbs always vary in their usage, and probably it is not just a binary decision between light and heavy,
+but a scale.
+[ On a somewhat related note, the "light" use may become "heavy" in time.
+For example, the verb *çek-* "pull" in *faks çek-* "to send fax" looks definitely "light",
+but lately, *email çek-* or *SMS çek-* also became common. ]
+
+It seems any any criteria for deciding whether a construction is a compound/light verb, or a "heavy" verb will be arbitrary.
+Here are a few I found useful:
+
+* The verbal compound requires an argument with the same case marking
+  of the non-verbal part.
+* The verb is semantically empty, the rest of the compound (noun or
+  adjective) provides the meaning.
+* The compound form is (likely to be) found in dictionaries.
+
+In difficult-to-decide cases, I prefer to err on the side of normal
+(non-compound/lvc) analysis.
+
+## Arguments/adjuncts, indirect objects
+
+This is another difficult decision during annotation. Some verbs in
+Turkish seems to take non-bare or accusative objects. A few examples:
+
+* dative: *Ali'ye inandım* "I believe (in) Ali"
+* ablative: *Ali'den hoşlanıyor* "She likes Ali"
+* locative: *Ali'de diretiyorlar* "The are insisting on Ali"
+* instrumental: *Ali'yle iligileniyor* "She is interested in Ali"
+
+A few seems to take an indirect object besides a bare/accusative one.
+All I can think of/find out seems to take dative.  A few (not so
+pleasant examples):
+
+* *Ali'yi ölüm-e mahkum ettiler* "They sentenced Ali to death"
+* *Ali'yi uyuşturucuy-a itiyor* "He is pushing Ali to drugs"
+* *Ali'yi istifa etme-ye zorladılar* "He forced Ali to resign"
+
+The difficulty of deciding whether a accompanying noun phrase is an
+argument or an adjunct is amplified by the fact that any argument can
+be left out from a Turkish clause as long as it can be recovered from
+the (possibly non-linguistic) context. This also results in confusion
+in cases with multiple objects, since UD spec suggests that if
+sentence has a single argument then it should be marked as `dobj`. In
+the sentences with two arguments above, it is more likely leave the
+accusative-marked (direct) object out.
+
+
+The simple guideline seems to be if the meaning of the verb is
+"incomplete" without an argument than it should be a direct/indirect
+object independent of the case assignment. But the practice is not
+that simple. A few additional helpers:
+
+* The arguments can be left out only when they are accessible from the
+  context (test suggested
+  [here](http://wiki.apertium.org/wiki/Dependency_parsing_for_Turkic#Testing_for_argument_status)).
+* The arguments tend to be opaque with respect to the usual function
+  of the case marking. For example, there is no direction "to/towards"
+  involved in *Ali'<b>ye</b> inandım*.
+* Cases of arguments are generally listed in the dictionaries.
+* Translating to a language where arguments are obligatory (e.g.,
+  English) sometimes helps. If the verb meanings are close, the
+  arguments will be obligatory in the translated sentence.
+
+Whichever test/guideline is used, the decision is not always clearcut.
+Another reason is the polysemy. For example if *git-* "go" probably
+requires a destination argument, but it can as well mean "leave" where
+it does not need a destination.
+
+METU-Sabancı treebank seems to make the distinction as well.
+The arguments are marked as `OBJECT` regardless of their case, and
+adjuncts are marked as `<case>.ADJUNCT`. However, it is quite
+inconsistent, indicating the difficulty of the task.
+
+
+## References
+
+* Aslı Göksel and Celia Kerslake. Turkish: A Comprehensive Grammar.  London: Routledge, 2005

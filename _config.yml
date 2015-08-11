@@ -5,6 +5,7 @@ markdown:     kramdown
 # annotations.
 kramdown:
   enable_coderay: false
+  toc_levels: 2..3
 #   parse_block_html: true # allow markdown in <div> etc.
 permalink:    date
 # safe:         true
