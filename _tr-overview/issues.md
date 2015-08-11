@@ -131,7 +131,7 @@ Our worry is that terror may/will start again.
 The important part to note here is that, the verb *başla* "start" has
 the subject *terör* "terror" and the copula has the subject *kaygımız*
 "our worry". However, the copula is a suffix (eventually) attached to
-the verb *start*. Hence, the same word needs to subject dependencies.
+the verb *start*. Hence, the same word needs two subject dependencies.
 Here is a potential analysis with inflectional groups avoiding
 multiple subjects:
 
@@ -146,7 +146,7 @@ The following is a (partial) proposal about which suffixes should be split, and 
 
 ### Copula
 
-Copular suffixes attached to nouns an adjectives create predicates. 
+Copular suffixes attached to nouns and adjectives create predicates. 
 For example, the word/sentence *arabadaydık*
 
 ~~~
