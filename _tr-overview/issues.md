@@ -9,19 +9,9 @@ permalink: tr/overview/issues.html
 This document is a summary of issues that arose during "pilot" UD annotation effort of Turkish.
 Here is an overall summary:
 
+* Table of contents
 {:toc}
 
-
-
-* Changes/additions to the feature values.
-* Multiple feature values for the same label.  
-* Tokenization of surface words to IGs.  
-    - copula / subordinating suffixes
-    - other productive derivation
-    - zero derivation from adjectives to nouns
-    - Possessive suffixes deriving (pro)nouns from adjectivals
-* Compound verbs - light verb constructions
-* Arguments/adjuncts, indirect objects
 
 ## Changes or additional values for `Tense`, `Aspect`, `Voice` and `Mood`
 
@@ -374,6 +364,7 @@ nsubj(oku, Ali'nin)
 
 ##### The suffix -mAK
 
+
 The verbal noun suffix -mAK is somewhat different than the other verbal noun suffixes.
 Most of the times (but not always) its subject resolves to one of the arguments of the higher-level clause.
 It also cannot precede some of the nominal suffixes,
@@ -396,8 +387,16 @@ the higher-level clause.
 However, it also breaks the parallel with the other forms,
 requires that the copula is marked as head if the verbal noun formed by *-mAK* is followed by one (in this case it is also unclear what relation to use between the copula and the subject-complement clause that *–mAK* is attached to).
 
+<!---
+<del datetime="2015-08-12 18:00">
+**Change of minds as of 2015-08-12 18:00** - or maybe not.
+-->
 Current proposal suggests, marking -mAK clauses like other verbal nouns (–mAK as the head),
 but possibly using a subtype of `acl` to signal that subject is missing.
+<!---
+</del>
+-->
+
 
 #### Possessive suffixes deriving (pro)nouns from adjectivals
 
@@ -665,6 +664,41 @@ The arguments are marked as `OBJECT` regardless of their case, and
 adjuncts are marked as `<case>.ADJUNCT`. However, it is quite
 inconsistent, indicating the difficulty of the task.
 
+## Clausal subjects with/without external arguments
+
+[this may not be specific to Turkish/Turkic]
+
+Some verbs take clausal subjects that may or may not missing arguments.
+In the following, the subject of the clausal subject has to be the
+object of the main clause.
+
+~~~
+(1) Reddedilmek         Aliyi   çok     üzmüştü.
+    refuse.PASS.VN      Ali.ACC very    sadden.PAST
+    Having been refused saddened Ali very much.
+
+(2) Sigara_içmek Ali'yi   öldürecek.
+    somoke.VN    Ali.ACC  kill-PAST
+    Smoking will kill Ali.
+~~~
+
+In the following, it is not or it is not necessarily the case.
+
+~~~
+(1) Ayşe'nin reddedilmesi     Aliyi   çok     üzmüştü.
+    Ayşe.GEN refuse.PASSV.VN  Ali.ACC very    sadden.PAST
+    The fact that Ayşe was refused saddened ali very much.
+
+(2) Sigara_içmesi Ali'yi   öldürecek.
+    smoke.VN      Ali.ACC  kill-PAST
+    The fact that someone (not necessarily Ali) is somoking will kill Ali.
+~~~
+
+This may need different subject relations based on the same need one
+needs `xcomp`-`ccomp` distincition.
+
+Although with the proposal above,
+the second case would be analyzed as normal nominal dependencies.
 
 ## References
 
