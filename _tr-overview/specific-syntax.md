@@ -14,58 +14,83 @@ We analyze this constructions like nominal predicates. *var* and *yok*
 act as the head of the predicate, the thing that "exists" is the
 subject:
 
-~~~~ sdparse
+~~~ sdparse
 Evde bira var -0 . \n There is beer at home.
 cop(var, -0)
 nsubj(var, bira)
 nmod(var, evde)
-~~~~
+~~~
 
-The same construction is used for expressing someone 'have/has' something or not. In this case, we mark the possessor with `nmod:own` (not to be confused with ``nmod:poss` used for nominal compounds with possessive marking).
+The same construction is used for expressing someone 'have/has' something or not.
+This is essentially, an existential construction like the above one with a genitive-possessive subject.
+Currently, we mark the "possessive" expressions differently.
+We mark the possessor with `nmod:own`
+(not to be confused with `nmod:poss` used for nominal compounds with possessive marking) and connect it directly to the predicate.
 
-~~~~ sdparse
+~~~ sdparse
 Benim hiç param yok -tu . \n I did not have any money (lit: there was no money of mine)
 cop(yok, -tu)
 nsubj(yok, param)
-advmod(yok, hiç)
-nmod:own(yok, benim)
-~~~~
+neg(param, hiç)
+nmod:own(yok, Benim)
+~~~
 
-Note that when possessor is not expressed, whether the sentence is an
-existential ('there is/are') or a possession statement ('something
-has') can be understood from the possessive marking (or lack of it) on
-the subject. (**Q: should this be indicated by the dependency
-relations**)
+Note that an alternative analysis is:
+
+~~~ sdparse
+Benim hiç param yok –tu .
+cop(yok, –tu)
+nsubj(yok, param)
+neg(param, hiç)
+nmod:poss(param, Benim)
+~~~
+
+Note that when possessor is not expressed, 
+whether the sentence is an existential ('there is/are') or a possession statement ('something has') can be understood from the possessive marking (or lack of it) on the subject. 
+
+Possessive:
+
+~~~ sdparse
+Para–m var . \n I have money (lit: there is money-POSS1Plu)
+nsubj(var, Para–m)
+~~~
+
+Simple existential:
+
+~~~ sdparse
+Para var . \n There is money
+nsubj(var, Para)
+~~~
 
 In subordinate clauses the copula *ol-* is used in existential predicates. In this case, we mark *ol-* as the head of the subordinate (existential) clause.
 
-~~~~ sdparse
+~~~ sdparse
 Evde ekmek olma -dığını bilmiyordum \n I did not know that there was no bread at home
 nsubj(olma, ekmek)
 nmod(olma, evde)
 mark(olma, -dığını)
 ccomp(bilmiyordum, olma)
-~~~~
+~~~
 
-~~~~ sdparse
-Ali'nin parası ol -duğu gün \n the day that Ali has/had money
+~~~ sdparse
+Ali'nin parası ol -duğu gün \n the day that Ali has (or had) money
 nsubj(ol, parası)
 nmod:own(ol, Ali'nin)
 mark(ol, -düğü)
 acl(gün, ol)
-~~~~
+~~~
 
 Besides subordinate clauses, the copula *ol-* can be used in a similar
 way (the meaning is slightly different than the cases where *var* or
 *yok* is used). Again, in these cases, we mark *ol-* as the head of
 the clause.
 
-~~~~ sdparse
+~~~ sdparse
 Bunun bir bedeli olur. \n This would have a consequence
 nsubj(olur, bedeli)
 det(bedeli, bir)
 nmod:own(olur, bunun)
-~~~~
+~~~
 
 ## Noun compounds
 
@@ -105,7 +130,7 @@ question particles.
 
 We mark question particles as `AUX`, and (for now) introduce a new
 feature `Question` that is set for question particles as well as
-other words that introduce questions (`PronType=Int` is also used, but
+other words that introduce questions (`PronType=Int`) is also used, but
 likely it is not sufficient/suitable in this case).
 
 The relation between the main predicate and the question mark is `aux`
@@ -120,36 +145,38 @@ sentence. For example,
 
 Declarative sentence
 
-~~~~ sdparse
+~~~ sdparse
 Yarın siz Ankara'ya gideceksiniz. \n You will go to Ankara tomorrow.
-~~~~
+~~~
 
-~~~~ sdparse
+~~~ sdparse
 Yarın siz Ankara'ya gidecek misiniz. \n Will you go to Ankara tomorrow?
-~~~~
+~~~
 
-~~~~ sdparse
+~~~ sdparse
 Siz Ankara'ya yarın mı gideceksiniz. \n Will you go to Ankara TOMORROW? 
-~~~~
+~~~
 
-~~~~ sdparse
+~~~ sdparse
 Siz yarın Ankara'ya mı gideceksiniz. \n Will you go TO ANKARA tomorrow?
-~~~~
+~~~
 
-~~~~ sdparse
+~~~ sdparse
 Yarın Ankara'ya siz mi gideceksiniz. \n Will YOU go to Ankara tomorrow?
-~~~~
+~~~
 
 Although there is a preference to place the question particle and the
 word modifies close to the verb, other word orders are also possible:
 
-~~~~ sdparse
+~~~ sdparse
 Yarın siz mi Ankara'ya gideceksiniz. \n Will YOU go to Ankara tomorrow?
-~~~~
+~~~
+
 or, 
-~~~~ sdparse
+
+~~~ sdparse
 Siz mi yarın Ankara'ya gideceksiniz. \n Will YOU go to Ankara tomorrow?
-~~~~
+~~~
 
 In these cases, we attach the question particle to the word/phrase it
 modifies, not to the predicate. Currently, we keep the same POS tag
@@ -189,12 +216,12 @@ The copula/auxiliary  *ol-* should only marked as part of a light-verb compound 
 The relation between a light verb and the noun it modifies noun is `compound`.
 The noun should be marked as the head of the compound.
 
-~~~~ sdparse
+~~~ sdparse
 Ali Ahmet'e yardım etti. \n Ali helped ahmet
 compound(yardım, etti)
 nsubj(yardim, Ali)
 dobj(yardim, Ahmet)
-~~~~
+~~~
 
 
 ## Numbers
@@ -202,14 +229,11 @@ dobj(yardim, Ahmet)
 If numbers are spelled out completely, we use a combination of `conj`
 and `coord` to mark it in a head-final fashion.
 
-~~~~ sdparse
+~~~ sdparse
 iki yüz otuz üç 
 comp(yüz, iki)
 conj(üç, otuz)
 conj(üç, yüz)
-
-~~~~
-
-
+~~~
 
 
