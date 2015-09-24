@@ -215,14 +215,14 @@ Here is a (possibly incomplete) list:
     - *–(y)AlI* *oku-<b>yalı</b> çok zaman geçti* "it has been a while <b>since</b> I(/he/she/we/them) read it"
 
 Note that the list only uses simple verb "oku" as the subordinate clause for brevity,
-but this could get as complicated as any clause with other its own (possibly clausal) modifiers.
+but this could get as complicated as any clause with other (possibly clausal) modifiers.
 
 Currently we split the subordinating suffix from the predicate,
 and mark it with the resulting category of the word (this follows the
 earlier work, e.g., METU-Sabancı treebank, or morphological analyzers
-like TRmorph. It is also more informative then marking these units as
-`SCONJ` or `PART`). We analyze the predicate as the head, and relate
-the subordinating IG with `mark`.
+like TRmorph. 
+It is also more informative then marking these units as `SCONJ` or `PART`).
+We analyze the predicate as the head, and relate the subordinating IG with `mark`.
 Here are a few examples:
 
 ~~~ sdparse

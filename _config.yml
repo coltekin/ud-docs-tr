@@ -12,7 +12,7 @@ permalink:    date
 markdown_ext: md
 
 # testing for redirect-from
-baseurl: "/ud-docs-tr"
+baseurl: "/ud-docs"
 
 gems:
   - jekyll-redirect-from
@@ -20,13 +20,13 @@ gems:
 collections:
   tr-pos:
     output: true
-    permalink: /template/pos/:path.html
+    permalink: /tr/pos/:path.html
   tr-feat:
     output: true
-    permalink: /template/feat/:path.html
+    permalink: /tr/feat/:path.html
   tr-dep:
     output: true
-    permalink: /template/dep/:path.html
+    permalink: /tr/dep/:path.html
   tr-overview:
     output: true
 

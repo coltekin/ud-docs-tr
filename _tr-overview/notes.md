@@ -74,6 +74,26 @@ documented in proper sections later.
 
   The relation should also cover *yani*, *işte*, *şey*.
 
+* In some cases the copula *ol-* with subordinating suffix *-an*
+  (*olan*) could be omitted. We treat these cases as subordination
+  withot a subordinating suffix, and over copula.
+
+~~~ sdparse
+kapağı açık kitap \n the book whose cover is open
+nsubj(açık, kapağı)
+acl(kitap, açık)
+~~~
+
+Compare with:
+
+~~~ sdparse
+kapağı açık ol –an kitap \n the book whose cover is open
+nsubj(açık, kapağı)
+cop(açık, ol)
+mark(açık, –an)
+acl(kitap, açık)
+~~~
+
 
 ## POS tagging related
 
@@ -285,12 +305,11 @@ cop(evde, yse)
 
     When attached to nouns, both forms can also be used as a discouse
     connective with the meaning 'as for NOUN'. In this case (following
-    English UD), we mark the copular suffix/clitic with `case` and use
-    appropriate relation (likely `nmod`) to relate it to the head.
+    English UD), we mark the copular suffix/clitic with `case`.
 
 ~~~~ sdparse
-Arabam sa henüz satılmadı . \ As for my car, it wasn't sold yet.
-case(arabam, sa)
+Arabam –sa henüz satılmadı . \n As for my car, it wasn't sold yet.
+case(arabam, –sa)
 nsubjpass(satılmadı, arabam)
 ~~~~
 
@@ -311,6 +330,12 @@ nsubjpass(satılmadı, arabam)
   likely for emphasis. In these cases, we mark it as if it is the
   object of the reflexive ....
   
+* *işte* is used when physically pointing to an object or person, or
+  pointing (not physically) to some entity mentioned earlier. We use
+  `discourse` relation for *işte*, but, connect it to the object that
+  it refers to or the pronoun that it accompanies if any of these are
+  available in the sentence. In case there are no "antecedents", like
+  other discourse connectives, we connect it to the highest-level unit.
   
 
 ## Derivations 

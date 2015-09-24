@@ -213,7 +213,7 @@ For example, *çek-* 'pull' is used as a light verb in *fotoğraf çek-* 'take p
 
 The copula/auxiliary  *ol-* should only marked as part of a light-verb compound in clear lexicalized cases, e.g., *sebep ol-* 'cause' but not *hasta ol-* 'be/become ill'.
 
-The relation between a light verb and the noun it modifies noun is `compound`.
+The relation between a light verb and the noun it modifies is `compound`.
 The noun should be marked as the head of the compound.
 
 ~~~ sdparse
@@ -226,14 +226,25 @@ dobj(yardim, Ahmet)
 
 ## Numbers
 
-If numbers are spelled out completely, we use a combination of `conj`
-and `coord` to mark it in a head-final fashion.
+If numbers are spelled out completely, we use a combination of
+`conj:num` and `coord` to mark it in a head-final fashion.
 
 ~~~ sdparse
 iki yüz otuz üç 
 comp(yüz, iki)
-conj(üç, otuz)
-conj(üç, yüz)
+conj:num(üç, otuz)
+conj:num(üç, yüz)
 ~~~
 
+The reason for the subtype `conj:num` is because of the fact that two
+(and in rare cases more) numbers without an explicit coordination
+conjunction could have "or" or "(approximately) between", for example,
+*beş altı* "five <b>or</b> six" or *on onbeş* "(around) ten <b>to</b>
+fifteen".
 
+~~~ sdparse
+yirmi beş tane istemiştik, sadece beş on tane geldi \n We had asked for 25
+but only 5 or 10 arrived.
+conj:num(beş, yirmi)
+conj(on, beş)
+~~~

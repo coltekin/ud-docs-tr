@@ -6,8 +6,6 @@ permalink: tr/overview/tokenization.html
 
 # Tokenization
 
-**This document is a work-in-progress proposal. See http://universaldependencies.github.io/docs for current/accepted specification** 
-
 Word tokenization of Turkish is similar to the other languages writing using Latin alphabet. However, syntactic analysis of Turkish often requires sub-word units as syntactic tokens. These tokens are called *inflectional groups* (IGs), and typically determined during morphological analysis/disambiguation in an NLP pipeline.
 
 ## Inflectional Groups
