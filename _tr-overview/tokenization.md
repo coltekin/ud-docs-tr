@@ -6,30 +6,38 @@ permalink: tr/overview/tokenization.html
 
 # Tokenization
 
-Word tokenization of Turkish is similar to the other languages writing using Latin alphabet. However, syntactic analysis of Turkish often requires sub-word units as syntactic tokens. These tokens are called *inflectional groups* (IGs), and typically determined during morphological analysis/disambiguation in an NLP pipeline.
+Word tokenization of Turkish is similar to the other languages writing using Latin alphabet.
+However, syntactic analysis of Turkish often requires sub-word units as "syntactic words."
+These tokens are called *inflectional groups* (IGs) in Turkish NLP literature,
+and typically determined during morphological analysis/disambiguation.
 
 ## Inflectional Groups
 
-In Turkish (and some/all other Turkic languages), the POS of a word may change with suffixation in a way that diverge from derivational morphology observed in other languages. The important difference is that parts of the word may refer to different entities and/or predicates that carry their own inflectional features and participate in different syntactic relations.
+In Turkish (and some/all other Turkic languages),
+the POS of a word may change with suffixation in a way that diverge from derivational morphology observed in other languages.
+The important difference is
+that parts of a word may refer to different entities and/or actions may carry their own inflectional features
+and may participate in different syntactic relations.
 
 A typical example is the following sentence:
 ~~~~
-Mavi arabadakiler   gazete    okuyor.
-blue car-LOC-KI-PLU newspaper read-PROG
-`the ones in the blue car are reading newspapers'
+Mavi arabadakiler   uyuyor
+blue car-LOC-KI-PLU sleep-PROG
+`the ones in the blue car are sleeping'
 ~~~~
 
-In this example, the suffix *-ki* in word *arabadakiler* creates a new IG.
-The first IG refers to a car, while the second IG refers to the people (in the car). 
-We split the word *arabadakiler* into two syntacitc units, which would be represented in  CoNLL-U as follows:
+In this example, the suffix *-ki* in word *arabadakiler* introduces a new syntacic unit.
+The first IG refers to a car,
+while the second IG refers to the people (in the car). 
+We split the word *arabadakiler* into two syntacitc units,
+which would be represented in  CoNLL-U as follows:
 
 ~~~~
 1   Mavi            mavi    ADJ     _
 2-3 arabadakiler    _
 2   _               araba   NOUN    _   Number=Sing|Case=Loc
-3   _               ki      NOUN    _   Number=Plur|Case=Nom
-4   gazete          gazete  NOUN    _
-5   okuyor          oku     VERB    _
+3   _               -ki     NOUN    _   Number=Plur|Case=Nom
+5   uyuyor          uyu     VERB    _
 6   .               .
 ~~~~
 In principle, instead of introducing unspecified surface form for the parts,
@@ -37,14 +45,42 @@ the word can be segmented (*arabada*+*kiler*).
 However, we do not require surface forms for IGs,
 since determining correct segmentation is non-trivial in some cases.
 
-The reason for splitting words into multiple IGs has to do with the fact that the IGs have their own set of inflections, and they participate in different syntactic relations.
-In the example above, *araba* 'car' is singular (not marked for plural) and marked for locative case, while *arabadaki* 'the one/person in the car' is not marked for case, and receives the plural suffix. In other words, the locative marker only applies to the first IG, and plural marker to the second. Furthermore, the adjective *mavi* 'blue' modifies *araba*, the car is blue not not the people inside. And the subject of the verb *oku* 'read' is the second IG.
+The decision of splitting words into multiple IGs is based on two reasons:
 
-~~~ sdparse
-Mavi arabada ─kiler gazete okuyor
-amod(arabada, Mavi)
-nmod(─kiler, arabada)
-nsubj(okuyor, ─kiler)
+- parts of a word have their own set of inflections,
+  potentially with conflicting feature-value pairs
+- parts of a word may  participate in different syntactic relations
+
+In the example above, *araba* 'car' is singular (`Number=Sing`)
+and marked for locative case (`Case=Loc`),
+while *arabadaki* 'the one/person in the car' is not marked for case,
+and receives the plural suffix.
+In other words,
+the locative marker only applies to the first IG,
+and the plural marker to the second.
+Furthermore, the adjective *mavi* 'blue' modifies *araba*,
+the car is blue not not the people inside.
+And the subject of the verb *uyu* 'sleep' is the second IG,
+(sleeping is done by the people in the car, not by the car).
+
+
+~~~ conllu
+# His/her passion was racing cars
+1       Tutkusu tutku   NOUN    NOUN    Number=Sing     3       nsubj
+2       yarış   yarış   NOUN    NOUN    Number=Sing     3       nmod:poss
+3       arabaları       araba   NOUN    NOUN    Number=Plur     0       root
+4       –ydı    _       VERB    VERB    Number=Sing|Person=3|Tense=Past 3       cop
+~~~
+
+
+~~~ conllu
+# The ones in the blue car are sleeeping
+1	Mavi	mavi	ADJ	ADJ	_	2	amod
+2-3	arabadakiler	_	_	_	_	_	_
+2	_	araba	NOUN	NOUN	Number=Sing|Case=Loc	3	nmod
+3	_	-ki	NOUN	NOUN	Number=Plur|Case=Nom	4	nsubj
+4	uyuyor	uyu	VERB	VERB	Number=Sing|Aspect=Prog|Tense=Pres	0 root
+5	.	.	PUNCT	PUNCT	_	4	punct
 ~~~
 
 METU-Sabancı treebank makes excessive use of IGs.
