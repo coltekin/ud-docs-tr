@@ -249,7 +249,8 @@ also be attached to inflected nouns.
 for something, so the example could also mean 'person who prefers wine (over
 beer)'. Although not very frequent, the non-derived noun can be modified by
 other words: *[kırmızı şarap]-çı* 'person preferring red wine (over white
-wine)'/'red wine seller'.
+wine)'/'red wine seller'. Or: *[eski kitap]-çı* 'person/shop selling
+old books', *yaşlı kitap-çı* 'old person selling books'.
 
 #### The suffix -lIk
 
