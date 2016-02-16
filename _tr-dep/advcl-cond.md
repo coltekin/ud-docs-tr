@@ -9,7 +9,7 @@ It is used for conditional clauses.
 
 ~~~ sdparse
 Kitabı okusaydın anlardın . \n You would understand if you had read the book
-advcl(anlardın, okusaydın)
+advcl:cond(anlardın, okusaydın)
 ~~~
 
 In Turkish conditional clauses are formed by a verbal inflection on the head of the clause. 

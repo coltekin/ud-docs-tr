@@ -53,9 +53,9 @@ The suffix is ambiguous between `Cnd` and `Des` (see below).
 ### `Des`: desiderative
 
 This mood expresses a wish.
-This mood shares the same form as the `Cnd` mood.
+It shares the same form as the `Cnd` mood.
 It may be disambiguated by particles (*keşke*: desire, *eğer*: condition) or by the context.
-For example, desires do not work well fixed time references.
+For example, desires do not work well with fixed time references.
 In general it is difficult to automatically disambiguate between these two moods.
 
 #### Examples
@@ -89,6 +89,8 @@ This expresses some sort of necessity (mush/should/have to in English).
 
 Turkish modal system includes a distinction between statements of direct experience (`Ind`) and statements with a more general or theoretical nature (Göksel & Kerslake, 2005, p.295).
 This mood is typically marked by the aorist marker on verbs, and with *-DIr* suffix on nominal predicates.
+
+(**NOTE:** this mood interacts with evidentiality.  One may consider the status of evidentiality expressed by this suffix to be "inferred". Hence, an alternative way of marking this could be `Evidential=Infer`, or something similar) 
 
 #### Examples
 

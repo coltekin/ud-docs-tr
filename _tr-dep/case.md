@@ -7,8 +7,7 @@ shortdef: 'case marking'
 The case relation is used for any case-marking element which is
 treated as a separate syntactic word (including prepositions,
 postpositions, and clitic case markers). Case-marking elements are
-treated as dependents of the noun or clause they attach to or
-introduce. 
+treated as dependents of the noun or clause they attach to.
 
 In Turkish, case marking is typically done through suffixation,
 in which case the case-marked word will carry the appropriate [Case](tr-feat/Case) feature.

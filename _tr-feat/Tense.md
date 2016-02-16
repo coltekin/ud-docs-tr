@@ -4,8 +4,6 @@ title: 'Tense'
 shortdef: 'tense'
 ---
 
-**This document is a work-in-progress proposal. See http://universaldependencies.github.io/docs for current/accepted specification** 
-
 Turkish has a complex tense/aspect/modality system.
 
 Turkish verbs can indicates actions in the present, past or future.

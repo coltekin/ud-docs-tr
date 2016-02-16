@@ -6,8 +6,9 @@ shortdef: 'direct object'
 
 The direct object of a verb is the noun phrase that denotes the entity acted upon.
 
-In Turkish, direct objects take either nominative, or accusative [cases](tr-feat/Case).
+In Turkish, direct objects take either nominative (unmarked), or accusative [cases](tr-feat/Case).
 We do not mark arguments of verbs in other cases with `dobj`.
+(**NOTE:** Kyrgiz treebank marks ablatives as in _pastadan aldı_ 'he took from the cake'. We may consider doing the same. At least we should try to unify the analyses.)
 Note also that we mark objects of intransitive causative verbs using [dobj:cau](dobj-cau).
 
 ~~~ sdparse

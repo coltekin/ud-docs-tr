@@ -15,8 +15,8 @@ They may also function as predicates, as in
 In Turkish the Adjective do not inflect.
 `Degree` is specified using [adverbs](ADV) _daha_ and _en_.
 
-We distinction between adjectives, [determiners](DET) and [numerals](NUM),
-we do _not_ mark determiners as adjectives as is the case in most (traditional)
+We distinguish between adjectives, [determiners](DET) and [numerals](NUM).
+We do _not_ mark determiners as adjectives as is the case in most (traditional)
 dictionaries and grammars.
 
 ### Examples

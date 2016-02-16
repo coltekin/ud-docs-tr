@@ -22,7 +22,6 @@ neg(küçük, değil)
 
 
 ~~~ sdparse
-Değil üniversite , orta okulu bile bitirmemiş . \n Let alone the
-university, he did not even finish the secondary school
+Değil üniversite , orta okulu bile bitirmemiş . \n Let alone the university, he did not even finish the secondary school
 neg(üniversite, Değil)
 ~~~

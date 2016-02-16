@@ -23,8 +23,7 @@ the verb cannot have a subject.
 
 * _Ev boy<b>an</b>dı_  "The house was painted"
 * _Buradan düş<b>ül</b>ebilir_ "One may fall from here" (impersonal, intransitive verb passivized)
-* _Buradan düş<b>ül</b>ebilir_ "One may fall from here" (impersonal, intransitive verb passivized)
-* _Böyle lafa kır-<b>ıl</b>-</b>ın</b>ır_ "[One] can be hurt by such words" (Double passive resulting in impersonal. Göksel & Kerslake 2005,p136)
+* _Böyle lafa kır-<b>ıl</b>-<b>ın</b>ır_ "[One] can be hurt by such words" (Double passive resulting in impersonal. Göksel & Kerslake 2005,p136)
 
 ### `Rcp`: reciprocal voice
 
@@ -43,13 +42,16 @@ the verb roots that can become reciprocal is limited.
 In Turkish, that this is a feature of verbs.
 Not to be caused with causative case of nouns in some languages.
 
-In causative constructions the subject is the entity "causing" the action. It generally translate to English as 'cause/make/have/let/allow' someone to do action described by the main verb.
+In causative constructions the subject is the entity "causing" the action. It generally translate to English as 'cause/make/have/let/allow' someone to perform action described by the main verb.
 Many (lexicalized) verbs that have unrelated roots in other languages are formed are related by the causative suffix in Turkish, 
 e.g., _öl-_ "die" and _öl-<b>dür</b>_ "kill" (to cause someone to die). 
-Causative suffix is also quite productive,
-and number of causative suffixes are theoretically unbounded.
-In practice, however, it is difficult to observe more than two causative suffixes attached to a verb.
-Often, double causative is used for emphasis and do not express multiple levels of causation.
+Causative suffix is quite productive.
+Multiple causative suffixes can be attached to a verb,
+and the number of causative suffixes are theoretically unbounded.
+In practice, however, the cases where more than two causative suffixes attached to a verb is rather rare.
+Often, two or more causative suffixes are used for emphasis and do not express multiple levels of causation.
+
+(**TODO:** multiple causatives need a solution.  See this [issue](https://github.com/UniversalDependencies/docs/issues/197) for details.)
 
 #### Examples
 

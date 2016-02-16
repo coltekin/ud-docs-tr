@@ -17,7 +17,8 @@ Turkish nouns inflect for [tr-feat/Number](), [possessor](tr-feat/Person-psor) a
 We also mark the non-root [inflectional groups](../overview/tokenization.html) as `NOUN` in complex derivation involving some suffixes, and subordinate clauses that function as a noun phrase.
 For details, see the section on subordination in [specific constructions](tr-overview/specific-syntax).
 
-All adjectives and some of the adverbs may function as a noun without additional derivation, which are also marked as `NOUN`.
+All adjectives and some of the adverbs may function as a noun without additional derivation, in this cases, we keep the POS tag of the original word, but assign nominal features to the word.
+(**TODO:** this needs more discussion)
 
 ### Examples
 

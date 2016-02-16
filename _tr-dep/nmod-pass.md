@@ -4,7 +4,7 @@ title: 'nmod:pass'
 shortdef: 'nominal modifier indicating the actor of a passive predicate'
 ---
 
-This subtype of [nmod]() is used for marking the performer of the real action, in a passive predicate.
+This subtype of [nmod]() is used for marking the performer of action (the subject in the corresponding active sentence) in a passive predicate.
 
 
 ~~~ sdparse

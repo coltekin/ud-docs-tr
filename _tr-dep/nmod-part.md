@@ -31,7 +31,7 @@ nmod:part(kilo, elmalardan)
 
 ~~~ sdparse
 Öğrencilerden bir kız \n A girl from\/among the students 
-nmod:part(kız, Öğrenciler)
+nmod:part(kız, Öğrencilerden)
 ~~~
 
 ~~~ sdparse

@@ -4,7 +4,7 @@ title: 'Definite'
 shortdef: 'definiteness or state'
 ---
 
-Definiteness is typically a feature of nouns, adjectives and articles.
+Definiteness is typically a feature of determiners.
 Its value distinguishes whether we are talking about something known and concrete, or something general or unknown.
 
 ### `Ind`: indefinite

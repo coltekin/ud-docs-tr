@@ -34,6 +34,7 @@ Action is in progress with respect to current or a reference time.
 Turkish has two progressive markers, *-(I)yor* and *-mAktA*.
 Latter is used in more formal cases than former.
 Otherwise there is no clear distinction between the two.
+In some contexts, both suffixes may also indicate _habitual_ aspect (`Aspect=Hab` described below).
 
 #### Examples
 
@@ -46,7 +47,7 @@ Otherwise there is no clear distinction between the two.
 
 Verbal morphology in Turkish may indicate an action that happens repeatedly at present or past.
 This aspect is mainly marked with suffix *-A/Ir*.
-In some cases, the progressive suffix *-(I)yor* may indicate habitual, 
+In some cases, the progressive suffix *-(I)yor* may indicate the habitual aspect, 
 _Her sabah 5 km koşuyorum_ "I ran 5 km every morning".
 See Göksel and Kerslake (2005, pp289--290) for details.
 

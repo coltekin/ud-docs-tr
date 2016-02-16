@@ -15,7 +15,7 @@ which can either be expressed inflectionally or using auxiliary verbs or particl
 
 We tag all verbs, including auxiliary and copula use of verbs "ol-" and "bulun-" as `VERB`.
 
-Besides ordinary verb stems, we also mark the non-root [inflectional groups](../overview/tokenization.html) that introduce a copula, as in _Ali evde<b>ydi</b>_ "Ali <b>was</b> at home".
+Besides ordinary verb stems, we also mark the non-root [inflectional groups](../overview/tokenization.html) that introduce a copular construction, as in _Ali evde<b>ydi</b>_ "Ali <b>was</b> at home".
 
 Turkish verbs can get a complex set of inflections which assign _voice_, _tense_, _aspect_, _mood_, _negation_, _person_ and _number_.
 Some feature assignments are ambiguous or non-trivial.

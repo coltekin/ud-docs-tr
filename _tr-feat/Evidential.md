@@ -9,7 +9,7 @@ shortdef: 'evidential'
 `Evidential`ity is a feature of [verbs](tr-pos/VERB).
 It indicates the source of evidence for a given statement. 
 It is often classified as a mood,
-but some linguists considers it an additional dimension to [Tense]()/[Aspect]()/[Moodality](Mood) system.
+but some linguists considers it an additional dimension alongside [Tense]()/[Aspect]()/[Moodality](Mood).
 
 Non-first-hand evidentiality is generally marked the suffix *-mIş*.
 However, in combination with other morphemes,

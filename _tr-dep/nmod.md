@@ -23,9 +23,9 @@ We also use the following language-specific subtypes for nmod:
 - [nmod:tmod](nmod-tmod): nominal modifier that indicates time
 - [nmod:own](nmod-own): owner in a possessive existential sentence
 - [nmod:poss](nmod-poss): possessor in in a genitive-possessive construction
-- [nmod:part](nmod-part): noun modifyer specifying the whole-part relation
+- [nmod:part](nmod-part): noun modifier specifying the whole-part relation
 
-We do not currently distinguis between core arguments and adjuncts
+We do not currently distinguish between core arguments and adjuncts
 (TODO: link to discussion).
 
 ~~~ conllu

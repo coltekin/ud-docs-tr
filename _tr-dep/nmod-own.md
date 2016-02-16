@@ -4,6 +4,8 @@ title: 'nmod:own'
 shortdef: 'owner in a possessive existential sentence'
 ---
 
+**This needs more discussion**
+
 This subtype of [nmod]() is used for marking the owner of a possessive existential sentence.
 
 In Turkish possessive sentences (e.g., "I have a book") resemble existential sentences
